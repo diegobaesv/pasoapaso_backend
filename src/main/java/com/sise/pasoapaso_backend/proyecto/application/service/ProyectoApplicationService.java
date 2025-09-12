@@ -20,6 +20,8 @@ public class ProyectoApplicationService {
     
     public InsertarProyectoResponseDto insertarProyecto(InsertarProyectoRequestDto requestDto) {
         Proyecto proyecto = proyectoDomainService.insertarProyecto(insertarProyectoMapper.requestToEntity(requestDto));
+                System.out.println("proyecto_appservice::"+proyecto.toString());
+
         return insertarProyectoMapper.entityToResponse(proyecto);
     }
 
